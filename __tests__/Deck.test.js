@@ -6,7 +6,7 @@ import Card from '../src/components/cards/Card';
 
 describe('Deck component', () => {
   it('renders Deck', () => {
-    const wrapper = shallow(<Deck><Card name="Phil" image="Phil.jpg" alt="Phil" /></Deck>);
+    const wrapper = shallow(<Deck><Card title="Phil" image="Phil.jpg" /></Deck>);
     expect(wrapper).toMatchSnapshot();
   });
 });

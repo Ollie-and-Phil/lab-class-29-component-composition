@@ -4,7 +4,12 @@ import Card from '../src/components/cards/Card';
 
 describe('Card component', () => {
   it('renders Card', () => {
-    const wrapper = shallow(<Card name="Phil" image="Phil.jpg" alt="Phil" />);
+    const wrapper = shallow(<Card title="Phil" image="Phil.jpg" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('renders gifCard', () => {
+    const wrapper = shallow(<Card image="Phil.jpg" />);
     expect(wrapper).toMatchSnapshot();
   });
 });

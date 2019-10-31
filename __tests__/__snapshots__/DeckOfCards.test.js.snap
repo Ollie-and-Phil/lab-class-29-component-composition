@@ -7,7 +7,7 @@ exports[`DeckOfCards renders a deck of cards 1`] = `
   >
     <Card
       image="Ollie.png"
-      name="Ollie"
+      title="Ollie"
     />
   </div>
   <div
@@ -15,7 +15,26 @@ exports[`DeckOfCards renders a deck of cards 1`] = `
   >
     <Card
       image="Ryan.txt"
-      name="Ryan"
+      title="Ryan"
+    />
+  </div>
+</Deck>
+`;
+
+exports[`DeckOfCards renders a deck of gifCards 1`] = `
+<Deck>
+  <div
+    key="you"
+  >
+    <Card
+      image="Ollie.png"
+    />
+  </div>
+  <div
+    key="sir"
+  >
+    <Card
+      image="Ryan.txt"
     />
   </div>
 </Deck>

@@ -6,7 +6,7 @@ import Deck from '../decks/Deck';
 const DeckOfCards = ({ cards }) => {
   const cardElements = cards.map(card => (
     <div key={`${card._id}`}>
-      <Card name={card.name} image={card.image} />
+      <Card title={card.name} image={card.image || card.gifLink} />
     </div>
   ));
 
@@ -20,7 +20,8 @@ const DeckOfCards = ({ cards }) => {
 DeckOfCards.propTypes = {
   cards: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string,
-    image: PropTypes.string.isRequired,
+    image: PropTypes.string,
+    gifLink: PropTypes.string,
     _id: PropTypes.string.isRequired
   }))
 };

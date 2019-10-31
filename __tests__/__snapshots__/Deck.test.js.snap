@@ -3,9 +3,8 @@
 exports[`Deck component renders Deck 1`] = `
 <section>
   <Card
-    alt="Phil"
     image="Phil.jpg"
-    name="Phil"
+    title="Phil"
   />
 </section>
 `;

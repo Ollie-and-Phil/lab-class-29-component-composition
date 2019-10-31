@@ -9,7 +9,16 @@ exports[`Card component renders Card 1`] = `
   </header>
   <figure>
     <img
-      alt="Phil"
+      src="Phil.jpg"
+    />
+  </figure>
+</Fragment>
+`;
+
+exports[`Card component renders gifCard 1`] = `
+<Fragment>
+  <figure>
+    <img
       src="Phil.jpg"
     />
   </figure>

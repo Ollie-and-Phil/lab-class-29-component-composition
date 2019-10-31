@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Card = ({ name, image }) => {
+const Card = ({ title, image }) => {
   return (
     <>
-      {name && <header><h3>{name}</h3></header>}
+      {title && <header><h3>{title}</h3></header>}
       <figure>
-        <img src={image} alt={name} />
+        <img src={image} />
       </figure>
     </>
   );
 };
 
 Card.propTypes = {
-  name: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired
+  title: PropTypes.string,
+  image: PropTypes.string,
 };
 
 export default Card;
