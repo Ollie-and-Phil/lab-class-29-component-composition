@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeckOfCards renders a deck of cards 1`] = `
+<Deck>
+  <div
+    key="you"
+  >
+    <Card
+      image="Ollie.png"
+      title="Ollie"
+    />
+  </div>
+  <div
+    key="sir"
+  >
+    <Card
+      image="Ryan.txt"
+      title="Ryan"
+    />
+  </div>
+</Deck>
+`;
+
+exports[`DeckOfCards renders a deck of gifCards 1`] = `
+<Deck>
+  <div
+    key="you"
+  >
+    <Card
+      image="Ollie.png"
+    />
+  </div>
+  <div
+    key="sir"
+  >
+    <Card
+      image="Ryan.txt"
+    />
+  </div>
+</Deck>
+`;

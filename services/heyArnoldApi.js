@@ -2,13 +2,13 @@ const fs = require('fs').promises;
 const http = require('https');
 
 Promise.all([
-  get('https://rickandmortyapi.com/api/character/'),
-  get('https://rickandmortyapi.com/api/location/')
+  get(`https://hey-arnold-api.herokuapp.com/api/v1/characters/random?count=${count}`),
+  get(`https://hey-arnold-api.herokuapp.com/api/v1/gifs/random?count=${count}`)
 ])
-  .then(([{ results: characters }, { results: locations }]) => {
+  .then(([{ results: characters }, { results: gifs }]) => {
     return {
-      characters: characters.map(({ id, name, status, species, image }) => ({ id, name, status, species, image })),
-      locations: locations.map(({ id, name, type, dimension }) => ({ id, name, type, dimension }))
+      characters: characters.map(({ id, name, image }) => ({ id, name, image })),
+      gifs: gifs.map(({ id, gifLink }) => ({ id, gifLink }))
     };
   })
   .then(obj => fs.writeFile('./content.json', JSON.stringify(obj)));
